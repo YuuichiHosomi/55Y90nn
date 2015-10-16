@@ -16,8 +16,3 @@ BOOL WINAPI DllMain(
 
 	return TRUE;
 }
-
-__declspec(dllexport)
-void func()
-{
-}
