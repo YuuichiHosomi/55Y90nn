@@ -87,7 +87,8 @@ LRESULT CALLBACK window_proc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 	case callback_msg:
 		if (wParam == id_tasktray) {
-			::DestroyWindow(hwnd);
+			if(lParam == WM_LBUTTONDOWN)
+				::DestroyWindow(hwnd);
 
 			return 0;
 		}
